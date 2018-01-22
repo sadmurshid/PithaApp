@@ -105,7 +105,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(Registration.this, "Registration successfully", Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            Toast.makeText(Registration.this, "Could not register", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Registration.this, "Could not register try again", Toast.LENGTH_SHORT).show();
                         }
 
                     }
