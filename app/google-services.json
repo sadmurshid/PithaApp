@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "150180349822",
+    "firebase_url": "https://pitha-app.firebaseio.com",
+    "project_id": "pitha-app",
+    "storage_bucket": "pitha-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150180349822:android:7e20b166d54f64a5",
+        "android_client_info": {
+          "package_name": "com.pitha.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150180349822-c0acn5n1p8rhkd6qu1mseid6i9l5a8id.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxqm13cnF9MCw9oolRIscr1Dpemp-vrpU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
