@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pitha.app.pitha_order"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+        <ImageView
+            android:id="@+id/pitha_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO" />
+
+
+    <TextView
+        android:id="@+id/pitha_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/pitha_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editAmount"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/input_amount"
+        android:layout_alignStart="@+id/input_amount"
+        android:layout_centerVertical="true"
+        android:hint="Enter Amount"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tk_textViews"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp" />
+
+
+    <Button
+        android:id="@+id/input_amount"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/show_cart_Button"
+        android:layout_alignRight="@+id/show_cart_Button"
+        android:layout_below="@+id/editAmount"
+        android:layout_marginTop="11dp"
+        android:text="Calculate price" />
+
+    <Button
+        android:id="@+id/add_cart_Button"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/tk_textViews"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tk_textViews"
+        android:layout_marginBottom="22dp"
+        android:text="Add to cart" />
+
+    <Button
+        android:id="@+id/delete_cart_Button"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/add_cart_Button"
+        android:layout_alignLeft="@+id/add_cart_Button"
+        android:layout_alignStart="@+id/add_cart_Button"
+        android:layout_marginBottom="13dp"
+        android:text="Delete Cart" />
+
+
+    <Button
+        android:id="@+id/show_cart_Button"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/delete_cart_Button"
+        android:layout_alignBottom="@+id/delete_cart_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:text="Show Cart" />
+
+    <Button
+        android:id="@+id/order_Button"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/show_cart_Button"
+        android:layout_alignStart="@+id/show_cart_Button"
+        android:layout_alignTop="@+id/add_cart_Button"
+        android:text="Order" />
+
+</RelativeLayout>

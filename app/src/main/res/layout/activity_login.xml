@@ -39,10 +39,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="Not have an account? signup here"
-            android:textAlignment="center"
-            android:id="@+id/textViewSignup"
+        <Button
+            android:layout_margin="15dp"
+            android:id="@+id/buttonRegister"
+            android:text="Register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -42,7 +42,7 @@
         <EditText
             android:layout_margin="15dp"
             android:inputType="textPassword"
-            android:hint="Password"
+            android:hint="Password (6 digit minium)"
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -51,14 +51,6 @@
             android:layout_margin="15dp"
             android:id="@+id/buttonRegister"
             android:text="@string/register_button_msg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_margin="15dp"
-            android:textAlignment="center"
-            android:id="@+id/textViewSignup"
-            android:text="@string/already_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

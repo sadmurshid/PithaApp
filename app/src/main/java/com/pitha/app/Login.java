@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private Button buttonLogin;
     private EditText editTextLoginEmail;
     private EditText editTextLoginPassword;
-    private TextView textViewSignup;
+    private Button buttonRegister;
 
     private FirebaseAuth firebaseAuth;
 
@@ -38,15 +38,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         if(firebaseAuth.getCurrentUser() !=null){
 
             //profile activity here
+            finish();
+            startActivity(new Intent(getApplicationContext(),pitha_Home_List.class));
         }
 
         editTextLoginEmail = findViewById(R.id.editTextLoginEmail);
         editTextLoginPassword = findViewById(R.id.editTextLoginPassword);
-        textViewSignup = findViewById(R.id.textViewSignup);
+        buttonRegister = findViewById(R.id.buttonRegister);
         buttonLogin = findViewById(R.id.buttonLogin);
 
         buttonLogin.setOnClickListener(this);
-        textViewSignup.setOnClickListener(this);
+        buttonRegister.setOnClickListener(this);
 
         progressDialog = new ProgressDialog(this);
 
@@ -85,7 +87,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
                         if(task.isSuccessful()){
                             //start the profile activity
-
+                            finish();
+                            startActivity(new Intent(getApplicationContext(),pitha_Home_List.class));
                         }
                     }
                 });
@@ -98,7 +101,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             userLogin();
         }
 
-        if (view == textViewSignup){
+        if (view == buttonRegister){
             finish();
             startActivity(new Intent(this, Registration.class));
         }

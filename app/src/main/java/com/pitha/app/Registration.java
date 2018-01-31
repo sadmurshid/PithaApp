@@ -1,6 +1,7 @@
 package com.pitha.app;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,7 +27,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     private Button buttonRegister;
     private EditText editTextEmail;
     private EditText editTextPassword;
-    private TextView textViewSignup;
+  //  private TextView textViewSignup;
     private EditText editName;
     private EditText editPhoneNumber;
 
@@ -47,10 +48,10 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         editPhoneNumber = findViewById(R.id.editPhoneNumber);
         editTextPassword = findViewById(R.id.editTextPassword);
 
-        textViewSignup = findViewById(R.id.textViewSignup);
+        //textViewSignup = findViewById(R.id.textViewSignup);
 
         buttonRegister.setOnClickListener(this);
-        textViewSignup.setOnClickListener(this);
+        //textViewSignup.setOnClickListener(this);
 
 
 
@@ -103,10 +104,12 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                             // profile activity here
 
                             Toast.makeText(Registration.this, "Registration successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),Login.class));
                         }
                         else{
                             Toast.makeText(Registration.this, "Could not register try again", Toast.LENGTH_SHORT).show();
                         }
+                        progressDialog.dismiss();
 
                     }
                 });
@@ -118,10 +121,6 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
         if(view==buttonRegister){
           registerUser();
-        }
-
-        if(view==textViewSignup){
-            //will open login activity here
         }
 
     }
