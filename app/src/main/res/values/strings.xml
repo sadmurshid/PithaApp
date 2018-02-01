@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Pitha App</string>
+    <string name="already_user">Already Registered? Sign in here</string>
+    <string name="register_button_msg">Register User</string>
+
+
+    <string-array name="Pithas">
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+        <item>Chitoi Pitha</item>
+
+    </string-array>
+</resources>

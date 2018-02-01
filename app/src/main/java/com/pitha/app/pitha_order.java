@@ -3,13 +3,24 @@ package com.pitha.app;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class pitha_order extends AppCompatActivity implements View.OnClickListener{
+
+    View customView;
+    RelativeLayout relativeLayout;
+    LayoutInflater layoutInflater;
+    PopupWindow popupWindow;
     ImageView pithaImage;
     TextView pitha_name_text_view;
     EditText pitha_amount;
@@ -167,15 +178,38 @@ public class pitha_order extends AppCompatActivity implements View.OnClickListen
 
 
     public void addToCart(){
-        String name = pitha_name_text_view.getText().toString().trim();
+       // String name = pitha_name_text_view.getText().toString().trim();
         String amount = pitha_amount.getText().toString();
-        String price = calculateAmount(name,amount);
-        cart = cart+"pitha name: "+name+","+"Amount: "+amount+","+"Price: "+price+"}"+"\n";
+        String price = calculateAmount(pname,amount);
+        cart = cart+"pitha name: "+pname+","+"Amount: "+amount+","+"Price: "+price+"\n"+"}";
     }
 
     public void showCart(String carts){
-        Intent intent = new Intent(getApplicationContext(),popup.class);
-        intent.putExtra("cart_item_lists", carts);
+
+
+        Intent intent = new Intent(getApplicationContext(),showCart.class);
+        intent.putExtra("cart_items", carts);
         startActivity(intent);
+
+//        layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+//        customView =   layoutInflater.inflate(R.layout.popup,null);
+//        popupWindow = new PopupWindow(customView, RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT,true);
+//        ((TextView)popupWindow.getContentView().findViewById(R.id.textView)).setText(cart);
+//        popupWindow.showAtLocation(relativeLayout, Gravity.NO_GRAVITY,0,0);
+//
+//
+//
+//        customView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                popupWindow.dismiss();
+//                return true;
+//            }
+//        });
+
+
+//        Intent intent = new Intent(getApplicationContext(),popup.class);
+//        intent.putExtra("cart_item_lists", carts);
+//        startActivity(intent);
     }
 }
