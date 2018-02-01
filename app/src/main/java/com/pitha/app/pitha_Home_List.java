@@ -31,7 +31,7 @@ public class pitha_Home_List extends AppCompatActivity {
 
                 String pitha_names = listView.getItemAtPosition(i).toString();
                 Intent intent = new Intent(getApplicationContext(),pitha_order.class);
-                intent.putExtra("pitha name", pitha_names);
+                intent.putExtra("pitha_name", pitha_names);
                 startActivity(intent);
             }
         });

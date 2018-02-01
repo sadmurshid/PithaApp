@@ -1,100 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pitha.app.pitha_order"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    tools:context="com.pitha.app.pitha_order">
 
 
-        <ImageView
-            android:id="@+id/pitha_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="TODO" />
+    <ImageView
+        android:id="@+id/pitha_image"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="11dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/pitha_name_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
 
     <TextView
         android:id="@+id/pitha_name_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/pitha_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/tk_textViews"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pitha_image" />
 
     <EditText
         android:id="@+id/editAmount"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/input_amount"
-        android:layout_alignStart="@+id/input_amount"
-        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+
         android:hint="Enter Amount"
-        android:inputType="number" />
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/tk_textViews"
+        app:layout_constraintEnd_toStartOf="@+id/tk_textViews"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tk_textViews" />
 
     <TextView
         android:id="@+id/tk_textViews"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="19dp"
-        android:layout_marginRight="19dp" />
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/input_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editAmount"
+        app:layout_constraintTop_toBottomOf="@+id/pitha_name_view" />
 
 
     <Button
         android:id="@+id/input_amount"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignEnd="@+id/show_cart_Button"
-        android:layout_alignRight="@+id/show_cart_Button"
-        android:layout_below="@+id/editAmount"
-        android:layout_marginTop="11dp"
-        android:text="Calculate price" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Calculate price"
+        app:layout_constraintBottom_toTopOf="@+id/show_cart_Button"
+        app:layout_constraintEnd_toEndOf="@+id/editAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tk_textViews" />
 
     <Button
         android:id="@+id/add_cart_Button"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/tk_textViews"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/tk_textViews"
-        android:layout_marginBottom="22dp"
-        android:text="Add to cart" />
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
+        android:layout_marginTop="65dp"
+        android:text="Add to cart"
+        app:layout_constraintBottom_toBottomOf="@+id/order_Button"
+        app:layout_constraintEnd_toStartOf="@+id/show_cart_Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_amount"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/delete_cart_Button"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/add_cart_Button"
-        android:layout_alignLeft="@+id/add_cart_Button"
-        android:layout_alignStart="@+id/add_cart_Button"
-        android:layout_marginBottom="13dp"
-        android:text="Delete Cart" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Delete Cart"
+        app:layout_constraintBottom_toTopOf="@+id/order_Button"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_cart_Button" />
 
 
     <Button
         android:id="@+id/show_cart_Button"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/delete_cart_Button"
-        android:layout_alignBottom="@+id/delete_cart_Button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="56dp"
-        android:layout_marginStart="56dp"
-        android:text="Show Cart" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="Show Cart"
+        app:layout_constraintBottom_toTopOf="@+id/delete_cart_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_cart_Button"
+        app:layout_constraintTop_toBottomOf="@+id/input_amount" />
 
     <Button
         android:id="@+id/order_Button"
         android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/show_cart_Button"
-        android:layout_alignStart="@+id/show_cart_Button"
-        android:layout_alignTop="@+id/add_cart_Button"
-        android:text="Order" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_cart_Button" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
